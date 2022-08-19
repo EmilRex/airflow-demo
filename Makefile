@@ -10,7 +10,13 @@ export CONSTRAINT_URL="https://raw.githubusercontent.com/apache/airflow/constrai
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 clean:
-	rm -r logs/ airflow.cfg airflow.db standalone_admin_password.txt webserver_config.py
+	rm -r \
+		airflow.cfg \
+		airflow.db \
+		dags/__pycache__ \
+		logs/ \
+		standalone_admin_password.txt \
+		webserver_config.py
 
 install:
 	pip install "apache-airflow==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}"
