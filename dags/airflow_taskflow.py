@@ -42,7 +42,7 @@ def energy_production_taskflow():
     # The date range here is handled by Airflow macros
     start, end = "{{ ds }}", "{{ macros.ds_add(ds, 1) }}"
     data = fetch_energy_production(start, end)
-    path = f"/tmp/{start}_{end}.parquet"
+    path = f"./data/{start}_{end}.parquet"
     store_energy_production(data, path)
 
 # The dag instance must be a top level key

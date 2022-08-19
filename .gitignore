@@ -1,4 +1,5 @@
 # Airflow
+data/
 logs/
 airflow-webserver.pid
 airflow.cfg

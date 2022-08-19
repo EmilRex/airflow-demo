@@ -49,7 +49,7 @@ with DAG(
 
     # The date range here is handled by Airflow macros
     start, end = "{{ ds }}", "{{ macros.ds_add(ds, 1) }}"
-    path = f"/tmp/{start}_{end}.parquet"
+    path = f"./data/{start}_{end}.parquet"
 
     fetch_energy_production_task = PythonOperator(
         task_id='fetch_energy_production',

@@ -43,7 +43,7 @@ def backfill(
     for day in period:
         start, end = day, day + timedelta(days=1)
         data = fetch_energy_production(start, end)
-        path = f"/tmp/{start.strftime('%Y-%m-%d')}_{end.strftime('%Y-%m-%d')}.parquet"
+        path = f"./data/{start.strftime('%Y-%m-%d')}_{end.strftime('%Y-%m-%d')}.parquet"
         store_energy_production(data, path)
 
 if __name__ == "__main__":
