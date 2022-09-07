@@ -5,6 +5,7 @@ This repo shows what a minimal pipeline looks like in airflow. There are three v
 1. [original.py](./dags/original.py) shows the pipeline without any orchestration
 2. [airflow_classic.py](./dags/airflow_classic.py) shows the pipeline as a classic airflow DAG
 3. [airflow_taskflow.py](./dags/airflow_taskflow.py) shows the pipeline as a [TaskFlow](https://airflow.apache.org/docs/apache-airflow/stable/tutorial_taskflow_api.html) airflow DAG
+4. [prefectified.py](./dags/prefectified.py) shows the pipeline as a Prefect 2 flow
 
 ## Getting Started
 
